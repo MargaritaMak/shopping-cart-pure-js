@@ -1,0 +1,79 @@
+.fas fa-shopping-cart{  
+    font-family: 'fas fa-shopping-cart';
+}
+
+
+.header {
+    width:100%;
+    background-color: rgba(235, 235, 235, 0.719);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.catagories {
+    list-style-type: none;
+    display:flex;
+    justify-content: space-around;
+    
+    margin-top: 25px;   
+}
+
+.lines {
+   border: 1px solid;
+   padding-left:10px;
+   padding-right:10px;
+   margin-left:25px;
+   margin-right:25px;
+}
+
+#images {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+}
+
+
+.Iphone {
+    flex: 10.33%;
+    margin-right:15px;
+    margin-left: 15px;
+    padding:0;
+    border: 1px solid;
+  }
+
+
+.Iphone>img{
+    width:100%
+}
+
+.name {
+    text-align: center;
+    border-top: 1px solid;
+}
+
+.price {
+    text-align:center;
+}
+
+.addToCart {
+    margin-left: 90px;
+}
+
+
+i { 
+    color: rgb(182, 179, 179);
+    font-size: 25px;
+    right:1%;
+    top: 20px;
+    position: absolute;
+}
+
+
+
+.logo {
+    margin-left: 15px;
+    width: 30px;
+    height: 30px;
+}
+
