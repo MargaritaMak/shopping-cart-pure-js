@@ -11,8 +11,8 @@ getFromBackEnd().then(data => {
         shopItems += `
         <div class="Iphone">
         <img src = ${item.img}>
-        <p class ='name'> ${item.title}</p>
-        <p class = 'price'> ${item.price}</p>
+        <p class ='text-center'> ${item.title}</p>
+        <p class = 'text-center'> ${item.price}</p>
         <button class ='addToCart' data-id = ${item.id}> Add to cart </button>
         </div>`
     })
@@ -25,13 +25,18 @@ for(let i = 0; i < elems.length; i++){
     elem.onclick =function(e){
         const currentElemId = e.target.dataset.id;
         if(cart.includes(currentElemId)){
-            return alert('Already in cart');
+            return disableButton(elem)
         } else {
             cart.push(currentElemId)
         }
         cartIcon.innerHTML = `<span> ${cart.length}<span>`
     }
 }
+
+
+function disableButton(btn) {
+    btn.disabled = true;
+  }
 })
 
 

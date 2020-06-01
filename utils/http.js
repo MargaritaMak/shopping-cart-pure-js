@@ -1,8 +1,8 @@
 export const getFromBackEnd = () => {
-    return fetch('https://api.jsonbin.io/b/5ece8ec3bbb0e41480000df6/5', {
+    return fetch('https://api.jsonbin.io/b/5ed4c6fb7741ef56a565d575', {
         headers: {
           'Content-Type': 'application/json',
-          'secret-key': '$2b$10$4ZHMUv09gL5n6jEU8qOBt.3YmHG2V0Vfnpurai.SSJV1kAQ8LU/6y'
+          'secret-key': '$2b$10$pREu6f06kxG9xN25IENQoeUo8saEPbmsLQeF/EUo7KjiJjw5cOm9.'
         }
       })
     .then(res => {

@@ -47,13 +47,9 @@
     width:100%
 }
 
-.name {
+.text-center {
     text-align: center;
     border-top: 1px solid;
-}
-
-.price {
-    text-align:center;
 }
 
 .addToCart {
