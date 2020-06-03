@@ -4,6 +4,9 @@ import { getFromBackEnd } from './utils/http.js';
 const elem1 = document.getElementById('images');
 const cartIcon = document.getElementById('cart');
 let cart = [];
+const button = document.getElementById('cart-info')
+var modal = document.querySelector(".modal");
+var closeButton = document.querySelector(".close-button");
 
 getFromBackEnd().then(data => {
     let shopItems = ''
@@ -20,9 +23,10 @@ getFromBackEnd().then(data => {
   
 
 const elems = document.getElementsByClassName('addToCart')
+console.log(elems)
 for(let i = 0; i < elems.length; i++){
     const elem = elems[i];
-    elem.onclick =function(e){
+    elem.onclick = function(e){
         const currentElemId = e.target.dataset.id;
         if(cart.includes(currentElemId)){
             return disableButton(elem)
@@ -37,8 +41,22 @@ for(let i = 0; i < elems.length; i++){
 function disableButton(btn) {
     btn.disabled = true;
   }
+
+
+  function toggleModal() {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+
+button.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
+
+
 })
-
-
-
-
